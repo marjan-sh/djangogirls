@@ -19,23 +19,12 @@
         <div>
             <h1><a href="/">Diango Girls Blog</a></h1>
         </div>
+    {}% extends 'blog/base.html' %}
 
-        <div>
-            <p>published: {{ post.published_date }}</p>
-            <h2><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </div>
-    {% endfor %}
-{% endblock %}
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-{% extends 'blog/base.html' %}
-
-{% block content %}
-    {% for post in posts %}
-         <div class="post">
-             <div class="date">
+    {% block content %}
+        {% for post in posts %}
+            <div class="post">
+               <div class="date">
                  <p>published: {{ post.published_date }}</p>
                     </div>
                     <h2><a href="">{{ post.title }}</a></h2>
