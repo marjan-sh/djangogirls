@@ -1,3 +1,4 @@
+{% extends 'blog/base.html' %}        
 {% load static %}
 <html>
     <head>
@@ -19,13 +20,11 @@
         <div>
             <h1><a href="/">Diango Girls Blog</a></h1>
         </div>
-    {% extends 'blog/base.html' %}
-
     {% block content %}
         {% for post in posts %}
             <div class="post">
                <div class="date">
-                 <p>published: {{ post.published_date }}</p>
+                    {{ post.published_date }}  
                     </div>
                     <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                     <p>{{ post.text|linebreaksbr }}</p>
@@ -40,7 +39,6 @@
          <h2><a href=" ">My First post</a></h2>
          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     </div>
-
     <div>
          <p>published: 21.07.2020, 16:09</p>
         <h2><a href="">My second post</a></h2>
