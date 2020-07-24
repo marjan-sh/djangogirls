@@ -52,7 +52,7 @@ a {
 }
 
 body {
-  background-image: url( '/static/images/images.png' );
+  /* background-image: url( '/static/images/images.png' ); */
   background-repeat: no-repeat;
   background-position: center;
 }
